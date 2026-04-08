@@ -107,8 +107,12 @@ button:hover{
 
 /* footer */
 
-footer{
+.footer{
   text-align:center;
   padding:20px;
-  background:#111;
+  background:#e200b1;
+}
+.footer p {
+  font: bold 16px "Segoe UI", sans-serif;
+  color: white;
 }
