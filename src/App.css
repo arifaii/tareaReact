@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg,hsl(302, 74%, 80%),#ff77db);
+  color: rgb(0, 0, 0);
+}
+
+/* header */
+
+header{
+  text-align:center;
+  padding:30px;
+  background:linear-gradient(90deg,#ffffff,#ffadad);
+}
+
+header h1{
+  margin:0;
+}
+/*search bar */
+
+.search-container {
+    display:flex;
+    justify-content:center;
+    margin:30px 0;
+    align-items: center;
+    width: 100%;
+}
+
+.search-input {
+    width: 300px;
+    padding: 12px 16px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-input:hover {
+    border: 2px solid hotpink;
+    transform: scale(1.05);
+}
+.search-inp0ut:focus {
+    border: 2px solid rgb(195, 39, 117);
+    transform: 0 0 10px rgb(195, 39, 117);
+}
+
+/* grid */
+
+section{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:25px;
+  padding:20px;
+}
+
+/* cards */
+
+.card{
+  background:#f5beff;
+  border-radius:12px;
+  padding:15px;
+  text-align:center;
+  transition:0.3s;
+  box-shadow:0 10px 20px rgba(0,0,0,0.4);
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+
+.card-img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* destacad */
+
+.destacado{
+  border:3px solid gold;
+}
+
+/* fvorito */
+
+.favorito{
+  background:linear-gradient(rgb(255, 136, 196), rgb(213, 86, 236));
+}
+
+/* boton */
+
+button{
+  margin-top:10px;
+  padding:8px 14px;
+  border:none;
+  border-radius:15px;
+  background:#b91372;
+  color:rgb(255, 255, 255);
+  cursor:pointer;
+}
+
+button:hover{
+  background:#fa198b;
+}
+
+/* footer */
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:#111;
+}
