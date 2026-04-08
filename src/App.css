@@ -147,7 +147,7 @@ header p {
 }
 
 .filter-controls {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
   align-items: center;
