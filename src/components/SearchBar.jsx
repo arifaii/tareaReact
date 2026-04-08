@@ -1,4 +1,4 @@
-function SearchBar({busqueda, handleBusqueda}) {
+function SearchBar({ busqueda, handleBusqueda, onClearSearch }) {
   return (
     <div className="search-container">
       <input
@@ -6,10 +6,15 @@ function SearchBar({busqueda, handleBusqueda}) {
         placeholder="🔎 Buscar anime o videojuego..."
         value={busqueda}
         onChange={handleBusqueda}
-            className="search-input"
+        className="search-input"
       />
+      {busqueda && (
+        <button type="button" className="clear-button" onClick={onClearSearch}>
+          Limpiar
+        </button>
+      )}
     </div>
-  )
+  );
 }
 
-export default SearchBar
+export default SearchBar;

@@ -1,5 +1,3 @@
-
-
 function CustomHeader() {
   return (
     <div>
@@ -8,7 +6,7 @@ function CustomHeader() {
         <p>Videojuegos y Anime destacado</p>
       </header>
     </div>
-  )
+  );
 }
 
-export default CustomHeader
+export default CustomHeader;

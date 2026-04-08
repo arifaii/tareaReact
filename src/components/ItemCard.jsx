@@ -1,29 +1,42 @@
-import React, { useState } from 'react';
-function ItemCard({ titulo, categoria, anio, destacado, imagen }) {
-
-  const [favorito, setFavorito] = useState(false);
-  const handleFavorito = () => {
-    setFavorito(!favorito);
-  }
-
-  const claseCard = `
-  card
-  ${destacado ? "destacado" : ""}
-  ${favorito ? "favorito" : ""}
-  `;
+function ItemCard({
+  id,
+  titulo,
+  categoria,
+  anio,
+  destacado,
+  imagen,
+  isFavorito,
+  onToggleFavorito,
+}) {
+  const claseCard = `card ${destacado ? "destacado" : ""} ${isFavorito ? "favorito" : ""}`;
 
   return (
-    <div className={claseCard}>
-      <img src={imagen} alt={titulo} className="card-img" />
-      <h3>{titulo}</h3>
-      <p>Categoría: {categoria}</p>
-      <p>Año: {anio}</p>
-    
-      <button onClick={handleFavorito}>
-        {favorito ? "⭐ Favorito" : "☆ Agregar a Favoritos"}
-      </button>
-    </div>
-  )
+    <article className={claseCard} aria-labelledby={`titulo-${id}`}>
+      <div className="card-visual">
+        <img src={imagen} alt={titulo} className="card-img" />
+        <div className="card-labels">
+          {destacado && (
+            <span className="badge badge-destacado">Destacado</span>
+          )}
+          {isFavorito && <span className="badge badge-favorito">Favorito</span>}
+        </div>
+      </div>
+
+      <div className="card-body">
+        <h3 id={`titulo-${id}`}>{titulo}</h3>
+        <p className="card-meta">{categoria}</p>
+        <p className="card-meta">Año: {anio}</p>
+
+        <button
+          className="action-button"
+          type="button"
+          onClick={onToggleFavorito}
+        >
+          {isFavorito ? "★ Guardado" : "☆ Guardar favorito"}
+        </button>
+      </div>
+    </article>
+  );
 }
 
-export default ItemCard
+export default ItemCard;
